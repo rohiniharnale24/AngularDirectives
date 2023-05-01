@@ -1,0 +1,40 @@
+<h1 class="bg-success text-white text-center">Directives</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- //directives -->
+      <!-- <p [ngStyle]="{ backgroundColor: 'red' }"></p> -->
+      <!-- <p [ngStyle]="{ backgroundColor: getBgColor() }"> -->
+      <p
+        [ngStyle]="{ backgroundColor: isproductAvailable ? 'yellow' : '#ccc' }"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        similique facere nobis ut id asperiores error dignissimos. Quasi illo,
+        sit repudiandae ex, neque dolorum et, asperiores fugit quibusdam commodi
+        qui.
+      </p>
+      <p
+        [ngStyle]="{
+          'background-color': 'red'
+        }"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+        culpa sint voluptatum iure fugiat eius magni atque hic placeat.
+        Reiciendis eaque quo id, explicabo ut impedit? Quam qui rem corporis!
+      </p>
+      <span>
+        <strong *ngIf="isproductAvailable; else prodNotAvil">
+          Product Name is: {{ productObj.pName }} with ID:{{
+            productObj.pid
+          }}and product is available
+        </strong>
+        <ng-template #prodNotAvil>
+          Product Name is: {{ productObj.pName }} with ID:{{ productObj.pid }}
+          the product is not available
+        </ng-template>
+        <app-skills></app-skills>
+        <app-table></app-table>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- <p>table works!</p> -->
+<h4 class="text-white text-center bg-danger mt-2">Students Table</h4>
+<table class="table table-bordered mt-4">
+  <thead>
+    <tr>
+      <th>Sr No</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentArray; index as i">
+      <td>{{ i }}</td>
+      <td>{{ student.fName }}</td>
+      <td>{{ student.lName }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.contact }}</td>
+    </tr>
+  </tbody>
+</table>
